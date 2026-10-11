@@ -65,7 +65,7 @@ function Story() {
         {ABOUT.story.chapters.map((item, index) => (
           <article key={item.title} className="card card-strip strip-2 grid gap-6 p-7 sm:p-10 lg:grid-cols-[13rem_1fr] lg:gap-14">
             <div>
-              <span className="font-display text-5xl leading-none text-brass">{String(index + 1).padStart(2, '0')}</span>
+              <span className="font-display text-5xl leading-none text-navy-400">{String(index + 1).padStart(2, '0')}</span>
               <p className="kicker mt-3 text-gold-500">{item.marker}</p>
             </div>
             <div>

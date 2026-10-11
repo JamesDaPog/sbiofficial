@@ -48,7 +48,7 @@ export function FeatureCards({ items, columns = 2 }) {
       {items.map(([title, body], i) => (
         <Reveal key={title} stagger className="h-full">
           <article className={`card card-strip card-hover ${STRIPS[i % STRIPS.length]} flex h-full flex-col p-7`}>
-            <span className="font-display text-4xl leading-none text-navy-200">{String(i + 1).padStart(2, '0')}</span>
+            <span className="font-display text-4xl leading-none text-navy-400">{String(i + 1).padStart(2, '0')}</span>
             <h3 className="mt-4 font-display text-[1.6rem] leading-tight text-ink">{title}</h3>
             <p className="mt-2.5 text-body-sm leading-relaxed text-ink-soft">{body}</p>
           </article>

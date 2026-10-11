@@ -18,7 +18,7 @@ export default function Accordion({ title, defaultOpen = false, children, id, in
       >
         <span className="flex min-w-0 items-baseline gap-5">
           {indexNumber && (
-            <span className="shrink-0 font-display text-base text-brass">{indexNumber}</span>
+            <span className="shrink-0 font-display text-base text-gold-600">{indexNumber}</span>
           )}
           <span className="min-w-0 font-display text-[1.35rem] leading-snug text-ink transition-colors group-hover:text-gold-600">
             {title}

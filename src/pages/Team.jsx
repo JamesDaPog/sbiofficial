@@ -19,7 +19,9 @@ function Portrait({ member, index }) {
   const [w, h] = member.photoSize ?? [600, 800]
 
   return (
-    <article className={`card card-strip ${STRIPS[index % STRIPS.length]} flex h-full flex-col p-3`}>
+    <article
+      className={`card card-strip ${STRIPS[index % STRIPS.length]} grid h-full grid-cols-[6.5rem_minmax(0,1fr)] items-start gap-4 p-3 sm:flex sm:flex-col sm:gap-0`}
+    >
       <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-navy-50">
         {member.photo ? (
           <img
@@ -38,7 +40,7 @@ function Portrait({ member, index }) {
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col px-2 pb-2 pt-4">
+      <div className="flex flex-1 flex-col pb-2 pr-2 pt-1 sm:px-2 sm:pt-4">
         <span className="tag w-fit">{member.role}</span>
         {member.name && <h3 className="mt-3 font-display text-xl leading-tight text-ink">{member.name}</h3>}
         <p className="mt-1 text-body-sm leading-relaxed text-ink-soft">{member.desc}</p>
@@ -91,7 +93,7 @@ export default function Team() {
 
       <Section weight="anchor" className="lines-bg sheet">
         <SectionHead title={TEAM.leadership.title} />
-        <Stagger className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4" gap={0.05}>
+        <Stagger className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4" gap={0.05}>
           {LEADERSHIP.map((member, i) => (
             <Reveal key={member.role} stagger className="h-full">
               <Portrait member={member} index={i} />

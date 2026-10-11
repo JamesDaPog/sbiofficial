@@ -55,7 +55,7 @@ export default function FormField({ field, value, error, onChange }) {
       {field.required ? (
         <span className="text-red-800" aria-hidden="true"> *</span>
       ) : (
-        <span className="ml-2 text-[13px] font-normal text-ink-soft">Optional</span>
+        <span className="ml-2 text-[14px] font-normal text-ink-soft">Optional</span>
       )}
     </>
   )
@@ -95,7 +95,7 @@ export default function FormField({ field, value, error, onChange }) {
 
   return (
     <Wrapper id={isChoice ? field.id : undefined} tabIndex={isChoice ? -1 : undefined} aria-describedby={isChoice ? describedBy : undefined} className="outline-none">
-      <Label htmlFor={isChoice ? undefined : field.id} className="block text-[15.5px] font-semibold leading-snug text-ink">
+      <Label htmlFor={isChoice ? undefined : field.id} className="block text-[16px] font-semibold leading-normal text-ink">
         {label}
       </Label>
       {field.help && (

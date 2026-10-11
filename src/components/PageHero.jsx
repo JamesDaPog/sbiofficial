@@ -110,7 +110,7 @@ export default function PageHero({
         {hasAside && <motion.div {...anim(0.3)}>{aside}</motion.div>}
       </div>
 
-      {credit && <p className="absolute bottom-14 right-4 text-[10.5px] text-white/40 sm:right-6">{credit}</p>}
+      {credit && <p className="absolute bottom-14 right-4 text-[11px] text-white/55 sm:right-6">{credit}</p>}
     </section>
   )
 }

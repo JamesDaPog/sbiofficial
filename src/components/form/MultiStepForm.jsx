@@ -296,7 +296,7 @@ export default function MultiStepForm({ form, onExit }) {
             <ol className="mt-8 space-y-3 rounded-xl border border-navy-200 bg-navy-50 px-6 py-5">
               {step.promise.map((rule, i) => (
                 <li key={rule} className="flex gap-3 text-body text-ink">
-                  <span className="font-display text-brass">{i + 1}.</span>
+                  <span className="font-display text-gold-600">{i + 1}.</span>
                   {rule}
                 </li>
               ))}
@@ -349,7 +349,7 @@ export default function MultiStepForm({ form, onExit }) {
           </div>
         </form>
 
-        <p className="mt-10 text-[13px] text-ink-soft">
+        <p className="mt-10 text-[14px] text-ink-soft">
           Your answers are saved in this browser as you type and sent to SBI only when you press Submit.
         </p>
       </div>

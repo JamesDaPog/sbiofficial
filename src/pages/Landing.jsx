@@ -79,7 +79,7 @@ function WhatWeDo() {
               <span aria-hidden="true" className="absolute left-6 top-1 font-display text-[5.5rem] leading-none text-navy-100 sm:left-8">
                 “
               </span>
-              <blockquote className="relative font-display text-[1.5rem] leading-snug text-ink sm:text-[1.85rem]">
+              <blockquote className="relative font-display text-[1.5rem] leading-[1.22] text-ink sm:text-[1.85rem]">
                 {whatWeDo.quote}
               </blockquote>
             </figure>

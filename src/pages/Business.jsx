@@ -55,7 +55,7 @@ function ChapterCard({ chapter, index }) {
         <h3 className="mt-1 font-display text-[1.45rem] leading-tight text-ink">{chapter.name}</h3>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {chapter.services.map((service) => (
-            <span key={service} className="rounded-full bg-paper-deep px-2 py-0.5 text-[11.5px] text-ink-soft">
+            <span key={service} className="rounded-full bg-paper-deep px-2.5 py-0.5 text-[12.5px] text-ink-soft">
               {service}
             </span>
           ))}

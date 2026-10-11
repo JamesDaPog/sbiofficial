@@ -25,7 +25,7 @@ export default function VideoHero({ title, lede, actions, children }) {
 
       <motion.div
         style={reduced ? undefined : { y: scroll.copyY, opacity: scroll.copyOpacity }}
-        className="mx-auto flex min-h-[100svh] max-w-page flex-col items-center justify-center px-6 pb-28 pt-[calc(68px+4rem)] text-center sm:px-8 sm:pb-32"
+        className="mx-auto flex min-h-[100svh] max-w-page flex-col items-start justify-center px-6 pb-28 pt-[calc(68px+4rem)] text-left sm:items-center sm:px-8 sm:text-center sm:pb-32"
       >
         <motion.h1
           {...anim(0.1)}
@@ -39,14 +39,14 @@ export default function VideoHero({ title, lede, actions, children }) {
           </motion.p>
         )}
         {actions && (
-          <motion.div {...anim(0.3)} className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
+          <motion.div {...anim(0.3)} className="mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
             {actions}
           </motion.div>
         )}
         {children && <motion.div {...anim(0.4)} className="w-full">{children}</motion.div>}
       </motion.div>
 
-      <p className="absolute bottom-14 right-4 text-[10.5px] text-white/40 sm:right-6">{FOOTAGE_CREDIT}</p>
+      <p className="absolute bottom-14 right-4 text-[11px] text-white/55 sm:right-6">{FOOTAGE_CREDIT}</p>
     </section>
   )
 }
