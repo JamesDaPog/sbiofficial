@@ -18,8 +18,8 @@ export default function SectionHead({
   const dark = tone === 'dark'
   const titleSize =
     weight === 'anchor'
-      ? 'text-[2.4rem] sm:text-[3.4rem] lg:text-[4.4rem]'
-      : 'text-[2rem] sm:text-[2.6rem] lg:text-[3.2rem]'
+      ? 'text-[2.2rem] sm:text-[2.8rem] lg:text-[3.5rem]'
+      : 'text-[1.9rem] sm:text-[2.3rem] lg:text-[2.75rem]'
 
   return (
     <Reveal variant="up" className={`${centered ? 'mx-auto text-center' : ''} ${className}`}>

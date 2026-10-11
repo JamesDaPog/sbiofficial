@@ -92,7 +92,7 @@ function WhatWeDo() {
                   <span className="grid h-8 w-8 place-items-center rounded-full bg-navy-50 font-display text-base text-navy-700">
                     {i + 1}
                   </span>
-                  <p className="mt-3 font-display text-xl text-ink">{who}</p>
+                  <p className="mt-3 font-display text-[1.4rem] leading-tight text-ink">{who}</p>
                   <p className="mt-1.5 text-body-sm leading-relaxed text-ink-soft">{does}</p>
                 </div>
               </Reveal>

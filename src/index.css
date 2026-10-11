@@ -66,8 +66,8 @@
 
   --text-display-xl: clamp(2.9rem, 7.4vw, 6.6rem);
   --text-display-xl--line-height: 0.98;
-  --text-display-lg: clamp(2.1rem, 4.6vw, 3.8rem);
-  --text-display-lg--line-height: 1.03;
+  --text-display-lg: clamp(2rem, 4vw, 3.2rem);
+  --text-display-lg--line-height: 1.06;
   --text-display-sm: clamp(1.2rem, 1.8vw, 1.45rem);
   --text-display-sm--line-height: 1.22;
 
@@ -75,10 +75,10 @@
   --text-body-lg--line-height: 1.6;
   --text-body: 16px;
   --text-body--line-height: 1.65;
-  --text-body-sm: 14.5px;
+  --text-body-sm: 15.5px;
   --text-body-sm--line-height: 1.6;
 
-  --text-label: 11.5px;
+  --text-label: 12px;
   --text-label--line-height: 1.4;
 
   --tracking-display: -0.012em;
@@ -123,6 +123,10 @@ h1, h2, h3, .font-display {
   font-kerning: normal;
   text-rendering: optimizeLegibility;
 }
+
+/* Even line lengths in headings, no single-word last lines in body copy. */
+h1, h2, h3 { text-wrap: balance; }
+p, li, dd { text-wrap: pretty; }
 
 /* Small uppercase section label, the newspaper "kicker". */
 .kicker {
@@ -282,7 +286,7 @@ h1, h2, h3, .font-display {
   }
 }
 
-.section-y-lg { padding-block: clamp(5.5rem, 10vw, 9.5rem); }
+.section-y-lg { padding-block: clamp(4.75rem, 8vw, 7.5rem); }
 .section-y    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
 .section-y-sm { padding-block: clamp(1.5rem, 2vw, 2rem); }
 
