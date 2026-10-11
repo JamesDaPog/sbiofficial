@@ -86,9 +86,9 @@ export default function PageHero({
           )}
           <motion.h1
             {...anim(0.12)}
-            className={`mt-5 font-display font-normal leading-[1.02] tracking-[-0.02em] text-white ${
+            className={`mt-6 font-display font-normal leading-[0.98] tracking-[-0.025em] text-white ${
               hasAside ? 'max-w-[16ch]' : 'max-w-[18ch]'
-            } text-[clamp(2.5rem,6vw,5.2rem)]`}
+            } text-[clamp(2.8rem,6.8vw,6.2rem)]`}
           >
             <Headline title={title} accent={accent} />
           </motion.h1>

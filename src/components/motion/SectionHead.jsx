@@ -18,8 +18,8 @@ export default function SectionHead({
   const dark = tone === 'dark'
   const titleSize =
     weight === 'anchor'
-      ? 'text-[2.1rem] sm:text-5xl lg:text-[3.4rem]'
-      : 'text-[1.85rem] sm:text-4xl lg:text-[2.6rem]'
+      ? 'text-[2.4rem] sm:text-[3.4rem] lg:text-[4.4rem]'
+      : 'text-[2rem] sm:text-[2.6rem] lg:text-[3.2rem]'
 
   return (
     <Reveal variant="up" className={`${centered ? 'mx-auto text-center' : ''} ${className}`}>
@@ -39,7 +39,7 @@ export default function SectionHead({
         />
       )}
       <h2
-        className={`max-w-[22ch] font-display ${titleSize} font-normal leading-[1.06] tracking-display ${
+        className={`max-w-[22ch] font-display ${titleSize} font-normal leading-[1.02] tracking-[-0.02em] ${
           dark ? 'text-white' : 'text-ink'
         } ${centered ? 'mx-auto' : ''}`}
       >

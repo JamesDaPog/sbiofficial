@@ -25,11 +25,11 @@ export default function VideoHero({ title, lede, actions, children }) {
 
       <motion.div
         style={reduced ? undefined : { y: scroll.copyY, opacity: scroll.copyOpacity }}
-        className="mx-auto flex min-h-[calc(100svh-4rem)] max-w-page flex-col items-center justify-center px-6 pb-28 pt-20 text-center sm:px-8 sm:pb-32"
+        className="mx-auto flex min-h-[calc(100svh-68px)] max-w-page flex-col items-center justify-center px-6 pb-28 pt-20 text-center sm:px-8 sm:pb-32"
       >
         <motion.h1
           {...anim(0.1)}
-          className="max-w-[18ch] font-display text-display-xl font-normal tracking-[-0.02em] text-white [text-shadow:0_2px_30px_rgba(6,20,38,0.45)]"
+          className="max-w-[20ch] font-display text-display-xl font-normal tracking-[-0.025em] text-white [text-shadow:0_2px_30px_rgba(6,20,38,0.45)]"
         >
           {title}
         </motion.h1>

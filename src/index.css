@@ -64,10 +64,10 @@
   --color-sbi-blue: #2D67A7;
   --color-sbi-green: #3B8DCC;
 
-  --text-display-xl: clamp(2.6rem, 6.2vw, 5.1rem);
-  --text-display-xl--line-height: 1.02;
-  --text-display-lg: clamp(1.9rem, 3.9vw, 3rem);
-  --text-display-lg--line-height: 1.08;
+  --text-display-xl: clamp(2.9rem, 7.4vw, 6.6rem);
+  --text-display-xl--line-height: 0.98;
+  --text-display-lg: clamp(2.1rem, 4.6vw, 3.8rem);
+  --text-display-lg--line-height: 1.03;
   --text-display-sm: clamp(1.2rem, 1.8vw, 1.45rem);
   --text-display-sm--line-height: 1.22;
 
@@ -82,7 +82,7 @@
   --text-label--line-height: 1.4;
 
   --tracking-display: -0.012em;
-  --tracking-label: 0.14em;
+  --tracking-label: 0.2em;
 
   --container-page: 74rem;
   --container-measure: 64ch;
@@ -282,7 +282,7 @@ h1, h2, h3, .font-display {
   }
 }
 
-.section-y-lg { padding-block: clamp(4.5rem, 8vw, 7.5rem); }
+.section-y-lg { padding-block: clamp(5.5rem, 10vw, 9.5rem); }
 .section-y    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
 .section-y-sm { padding-block: clamp(1.5rem, 2vw, 2rem); }
 
