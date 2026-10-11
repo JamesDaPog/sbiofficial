@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sbinetwork.org/sitemap.xml
+Sitemap: https://sbinetwork.vercel.app/sitemap.xml

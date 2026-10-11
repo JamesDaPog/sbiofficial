@@ -11,7 +11,7 @@ import { useEffect } from 'react'
  */
 
 export const SITE_NAME = 'SBI Network'
-export const SITE_URL = 'https://sbinetwork.org' // TODO: confirm the production domain.
+export const SITE_URL = 'https://sbinetwork.vercel.app' // Switch when a custom domain is connected.
 export const OG_IMAGE = '/og.png'
 
 export const ROUTE_META = {
