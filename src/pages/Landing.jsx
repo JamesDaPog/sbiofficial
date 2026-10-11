@@ -48,7 +48,7 @@ function Hero() {
         </>
       }
     >
-      <dl className="mt-16 grid w-full max-w-4xl grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+      <dl className="mx-auto mt-16 grid w-full max-w-4xl grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {FACTS.map(([value, label]) => (
           <div key={label} className="glass rounded-2xl px-4 py-5 text-center">
             <dt className="sr-only">{label}</dt>
