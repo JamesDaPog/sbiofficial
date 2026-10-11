@@ -25,7 +25,7 @@ export default function VideoHero({ title, lede, actions, children }) {
 
       <motion.div
         style={reduced ? undefined : { y: scroll.copyY, opacity: scroll.copyOpacity }}
-        className="mx-auto flex min-h-[calc(100svh-68px)] max-w-page flex-col items-center justify-center px-6 pb-28 pt-20 text-center sm:px-8 sm:pb-32"
+        className="mx-auto flex min-h-[100svh] max-w-page flex-col items-center justify-center px-6 pb-28 pt-[calc(68px+4rem)] text-center sm:px-8 sm:pb-32"
       >
         <motion.h1
           {...anim(0.1)}

@@ -52,9 +52,9 @@ export default function PageHero({
   const hasAside = Boolean(aside) && !isPhoto
 
   const height = {
-    photo: 'min-h-[min(48rem,84svh)] pb-32 pt-24',
-    split: 'pb-28 pt-16 sm:pt-20 lg:pb-36 lg:pt-24',
-    band: 'pb-24 pt-16 sm:pt-20 lg:pb-28 lg:pt-24',
+    photo: 'min-h-[min(54rem,94svh)] pb-32 pt-[calc(68px+5rem)]',
+    split: 'pb-28 pt-[calc(68px+3.5rem)] lg:pb-36 lg:pt-[calc(68px+5rem)]',
+    band: 'pb-24 pt-[calc(68px+3.5rem)] lg:pb-28 lg:pt-[calc(68px+5rem)]',
   }[variant]
 
   return (
@@ -68,6 +68,8 @@ export default function PageHero({
             </picture>
           </HeroBackdrop>
           <div aria-hidden="true" className={`absolute inset-0 -z-10 ${PHOTO_WASH}`} />
+          {/* On narrow screens the copy spans the whole photo, so darken all of it. */}
+          <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy-950/45 lg:hidden" />
         </>
       ) : (
         <div aria-hidden="true" className={`absolute inset-0 -z-10 ${BAND_TEXTURE}`} />

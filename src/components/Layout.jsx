@@ -20,6 +20,22 @@ const EXTRA_NAV = [
   { to: '/apply', label: 'Apply to start a chapter' },
 ]
 
+/* Pages that open on a full-bleed navy hero. The header floats transparent
+   over them and turns solid once the page scrolls. */
+const HERO_ROUTES = ['/', '/about', '/business', '/chapter', '/team', '/manual']
+const SOLID_AFTER_PX = 40
+
+function useScrolledPast(px) {
+  const [isPast, setIsPast] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setIsPast(window.scrollY > px)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [px])
+  return isPast
+}
+
 /* Forms are full-screen flows with their own progress header. */
 const FOCUS_ROUTES = ['/apply', '/request']
 
@@ -55,6 +71,9 @@ function Header({ location }) {
   const menuRef = useRef(null)
   const toggleRef = useRef(null)
   const closeMenu = useCallback(() => setIsMenuOpen(false), [])
+  const isScrolled = useScrolledPast(SOLID_AFTER_PX)
+  const overHero = HERO_ROUTES.includes(location)
+  const isClear = overHero && !isScrolled && !isMenuOpen
 
   useEffect(() => {
     closeMenu()
@@ -74,8 +93,12 @@ function Header({ location }) {
   }, [isMenuOpen, closeMenu])
 
   return (
-    <header className="sticky top-0 z-50">
-      <div className="border-b border-white/10 bg-navy-950/95 backdrop-blur-md">
+    <header className={`${overHero ? 'fixed inset-x-0' : 'sticky'} top-0 z-50`}>
+      <div
+        className={`border-b transition-[background-color,border-color] duration-500 ${
+          isClear ? 'border-transparent bg-[linear-gradient(180deg,rgba(6,20,38,0.7),rgba(6,20,38,0))]' : 'border-white/10 bg-navy-950/90 backdrop-blur-md'
+        }`}
+      >
         <div className="mx-auto flex h-[68px] max-w-page items-center justify-between gap-6 px-5 sm:px-8">
           <Link href="/" className="flex items-center gap-3" aria-label="SBI home">
             <Wordmark tone="light" />
