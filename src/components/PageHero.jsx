@@ -15,7 +15,7 @@ import { HeroBackdrop, heroRise, useHeroScroll } from './HeroFilm'
  */
 
 const PHOTO_WASH =
-  'bg-[linear-gradient(90deg,rgba(6,20,38,0.88)_0%,rgba(6,20,38,0.62)_45%,rgba(6,20,38,0.2)_100%),linear-gradient(180deg,rgba(6,20,38,0.45)_0%,transparent_30%,transparent_70%,rgba(6,20,38,0.95)_100%)]'
+  'bg-[linear-gradient(90deg,rgba(6,20,38,0.85)_0%,rgba(6,20,38,0.5)_42%,rgba(6,20,38,0)_75%),linear-gradient(180deg,rgba(6,20,38,0.4)_0%,transparent_25%,transparent_72%,rgba(6,20,38,0.95)_100%)]'
 
 const BAND_TEXTURE =
   'bg-[radial-gradient(50%_70%_at_85%_10%,rgba(59,141,204,0.24),transparent_70%),repeating-linear-gradient(115deg,transparent_0_46px,rgba(255,255,255,0.035)_46px_47px)]'
@@ -93,7 +93,7 @@ export default function PageHero({
             <Headline title={title} accent={accent} />
           </motion.h1>
           {lede && (
-            <motion.p {...anim(0.2)} className="mt-6 max-w-[54ch] text-body-lg text-white/85">
+            <motion.p {...anim(0.2)} className="mt-6 max-w-[54ch] text-body-lg text-white/90 [text-shadow:0_1px_18px_rgba(6,20,38,0.7)]">
               {lede}
             </motion.p>
           )}

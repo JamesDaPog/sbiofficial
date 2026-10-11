@@ -10,7 +10,7 @@ import HeroFilm, { FOOTAGE_CREDIT, heroRise, useHeroScroll } from './HeroFilm'
 /* Darker at the top for the header, a soft pool behind the copy, and a long
    fade to navy at the bottom where the next section overlaps. */
 const WASH =
-  'bg-[radial-gradient(60%_45%_at_50%_45%,rgba(6,20,38,0.55),transparent_75%),linear-gradient(180deg,rgba(6,20,38,0.7)_0%,rgba(6,20,38,0.35)_35%,rgba(6,20,38,0.45)_65%,rgba(6,20,38,1)_100%)]'
+  'bg-[radial-gradient(55%_40%_at_50%_45%,rgba(6,20,38,0.5),transparent_75%),linear-gradient(180deg,rgba(6,20,38,0.55)_0%,rgba(6,20,38,0.1)_30%,rgba(6,20,38,0.15)_60%,rgba(6,20,38,0.95)_100%)]'
 
 export default function VideoHero({ title, lede, actions, children }) {
   const sectionRef = useRef(null)
@@ -34,7 +34,7 @@ export default function VideoHero({ title, lede, actions, children }) {
           {title}
         </motion.h1>
         {lede && (
-          <motion.p {...anim(0.2)} className="mt-6 max-w-[58ch] text-body-lg text-white/90">
+          <motion.p {...anim(0.2)} className="mt-6 max-w-[58ch] text-body-lg text-white/90 [text-shadow:0_1px_18px_rgba(6,20,38,0.6)]">
             {lede}
           </motion.p>
         )}

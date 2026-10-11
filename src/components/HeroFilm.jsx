@@ -9,9 +9,10 @@ import { EASE } from './motion/Reveal'
  * and the film is replaced by its poster frame.
  */
 
-/* 4K for large screens, 1080p for everything else. The browser takes the
-   first source whose media query and type it supports. */
-const WIDE_SCREEN = '(min-width: 1440px)'
+/* 4K wherever the screen has more than ~2000 device pixels across: big
+   monitors, and retina laptops and tablets. 1080p everywhere else. The browser
+   takes the first source whose media query and type it supports. */
+const WIDE_SCREEN = '(min-width: 1800px), (min-width: 1024px) and (min-resolution: 1.5dppx)'
 const VIDEO_SOURCES = [
   ['/hero-skylines-4k.webm', 'video/webm', WIDE_SCREEN],
   ['/hero-skylines-4k.mp4', 'video/mp4', WIDE_SCREEN],
